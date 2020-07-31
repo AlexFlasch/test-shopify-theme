@@ -1,7 +1,3 @@
-.grid-view-item__image-wrapper.product-card__image-wrapper {
-  position: relative;
-}
-
 .buy-now__container {
   position: absolute;
   top: 0;
@@ -17,6 +13,12 @@
 .buy-now__button {
   display: none;
   opacity: 0;
+
+  border: 0;
+  background-color: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 15px 30px;
 
   transition-property: opacity;
   transition-duration: 0.1s;
