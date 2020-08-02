@@ -1,0 +1,46 @@
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    {
+      "id": "faq-section",
+      "type": "text",
+      "label": "FAQ Blocks",
+      "default": "FAQs"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "FAQ Entry",
+      "type": "select",
+      "settings": [
+        {
+          "id": "faqQuestion",
+          "type": "textarea",
+          "label": "FAQ Question"
+        },
+        {
+          "id": "faqAnswer",
+          "type": "textarea",
+          "label": "FAQ Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQs",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="faq-section__wrapper">
+  {% for block in section.blocks %}
+    <div class="faq-entry">
+      <p class="faq-question">{{ block.settings.faqQuestion }}</p>
+      <p class="faq-answer">{{ block.settings.faqAnswer }}</p>
+    </div>
+  {% endfor %}
+</section>
