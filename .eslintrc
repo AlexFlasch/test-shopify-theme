@@ -9,7 +9,9 @@
     "TAP": "writable",
     "Taproom": "writable",
     "$": "readonly",
-    "theme": "writable"
+    "theme": "writable",
+    "google": "readonly",
+    "slate": "readonly"
   },
   "rules": {
     "space-before-function-paren": "off",
