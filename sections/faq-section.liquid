@@ -39,14 +39,16 @@
 <section class="faq-section__wrapper">
   <h2>FAQs</h2>
   {% for block in section.blocks %}
-    <div class="faq-entry" data-collapsed="true">
+    <div class="faq-entry" data-collapsed="true" role="button" aria-pressed="false" aria-expanded="false" tabindex="0">
       <div class="faq-question">
         <div class="faq-question__text-wrapper">
           <span class="faq-question__text">{{ block.settings.faqQuestion }}</span>
         </div>
         <div class="faq-question__expand-icon"></div>
       </div>
-      <p class="faq-answer">{{ block.settings.faqAnswer }}</p>
+      <div class="faq-answer__text-wrapper">
+        <p class="faq-answer__text">{{ block.settings.faqAnswer }}</p>
+      </div>
     </div>
   {% endfor %}
 </section>
